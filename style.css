@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: Open Sans;
+    background-color: #F0F0F0;
+    margin: 5vh 10vw 5vh 10vw;
+}
+
+caption {
+    color: #303030;
+    text-shadow: 0 0 1px black;
+}
+
+table {
+    box-shadow: 0 0 5px gray;
+}
+
+thead {
+    background-color: #D0D0D0;
+    color: #303030;
+    font-size: 1.25em;
+}
+
+th {
+    padding: 5px;
+}
+
+tbody {
+    background-color: #DCDCDC;
+    font-size: 1.25em;
+    color: #202020;
+}
+
+td {
+    padding: 5px;
+}
