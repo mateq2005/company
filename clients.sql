@@ -23,6 +23,6 @@ values
 (9, 'David Clark', '555-6543', 'david.clark@email.com', '876 Sycamore St, Townland'),
 (10, 'Helen Martinez', '555-8765', 'helen.martinez@email.com', '1098 Oak St, Villagetown');
 
-desc Clients;
+desc Customers;
 
-select * from Clients;
+select * from Customers;
