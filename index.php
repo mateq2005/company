@@ -26,7 +26,7 @@
 
         # Customers
 
-        $clients = mysqli_query($conn, 'select * from clients');
+        $customers = mysqli_query($conn, 'select * from customers');
 
         echo('<table class="customers">');
 
@@ -41,7 +41,7 @@
         echo('</thead>');
 
         echo('<tbody>');
-        while($row = mysqli_fetch_array($clients)) {
+        while($row = mysqli_fetch_array($customers)) {
             echo('<tr>');
                 echo('<td>'.$row['CustomerID'].'</td>');
                 echo('<td>'.$row['FullName'].'</td>');
