@@ -1,6 +1,6 @@
 --> C:/xampp/htdocs/company/clients.sql <--
 
-create table Clients (
+create table Customers (
     CustomerID int auto_increment,
     FullName varchar(25) not null,
     Phone varchar(25) not null,
@@ -9,7 +9,7 @@ create table Clients (
     primary key (CustomerID) 
 );
 
-insert into Clients 
+insert into Customers
 (CustomerID, FullName, Phone, Email, Address)
 values
 (1, 'John Doe', '555-1234', 'john.doe@email.com', '123 Main St, Cityville'),
