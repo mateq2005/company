@@ -1,4 +1,4 @@
---> C:/xampp/htdocs/company/clients.sql <--
+--> C:/xampp/htdocs/company/customers.sql <--
 
 create table Customers (
     CustomerID int auto_increment,
