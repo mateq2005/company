@@ -10,10 +10,10 @@ use company;
 
 create table customers (
     CustomerID int auto_increment,
-    FullName varchar(25) not null,
-    Phone varchar(25) not null,
-    Email varchar(25) not null,
-    Address varchar(25) not null,
+    FullName varchar(255) not null,
+    Phone varchar(255) not null,
+    Email varchar(255) not null,
+    Address varchar(255) not null,
     primary key (CustomerID) 
 );
 
@@ -50,7 +50,7 @@ select * from customers;
 create table orders (
     OrderID int auto_increment,
     CustomerID int not null,
-    OrderName varchar(25) not null,
+    OrderName varchar(255) not null,
     OrderDate date not null,
     primary key (OrderID) 
 );
@@ -87,9 +87,9 @@ select * from orders;
 
 create table employees (
     EmployeeID int auto_increment,
-    FullName varchar(25) not null,
-    Phone varchar(25) not null,
-    Email varchar(25) not null,
+    FullName varchar(255) not null,
+    Phone varchar(255) not null,
+    Email varchar(255) not null,
     primary key (EmployeeID) 
 );
 
