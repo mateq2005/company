@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
     <?php
 
         # Connection Data
@@ -28,64 +28,93 @@
 
         $customers = mysqli_query($conn, 'select * from customers');
 
-        echo('<table class="customers">');
-
-        echo('<caption><h1>Customers</h1></caption>');
-
-        echo('<thead>');
-            echo('<th>CustomerID</th>');
-            echo('<th>FullName</th>');
-            echo('<th>Phone</th>');
-            echo('<th>Email</th>');
-            echo('<th>Address</th>');
-        echo('</thead>');
-
-        echo('<tbody>');
-        while($row = mysqli_fetch_array($customers)) {
-            echo('<tr>');
-                echo('<td>'.$row['CustomerID'].'</td>');
-                echo('<td>'.$row['FullName'].'</td>');
-                echo('<td>'.$row['Phone'].'</td>');
-                echo('<td>'.$row['Email'].'</td>');
-                echo('<td>'.$row['Address'].'</td>');
-            echo('</tr>');
-        }
-        echo('</tbody>');
-
-        echo('</table>');
-
         # Orders
 
         $orders = mysqli_query($conn, 'select * from orders');
 
-        echo('<table class="orders">');
+        # Employees
 
-        echo('<caption><h1>Orders</h1></caption>');
-
-        echo('<thead>');
-            echo('<th>OrderID</th>');
-            echo('<th>CustomerID</th>');
-            echo('<th>OrderName</th>');
-            echo('<th>OrderDate</th>');
-        echo('</thead>');
-
-        echo('<tbody>');
-        while($row = mysqli_fetch_array($orders)) {
-            echo('<tr>');
-            echo('<td>'.$row['OrderID'].'</td>');
-            echo('<td>'.$row['CustomerID'].'</td>');
-            echo('<td>'.$row['OrderName'].'</td>');
-            echo('<td>'.$row['OrderDate'].'</td>');
-            echo('</tr>');
-        }
-        echo('</tbody>');
-
-        echo('</table>');
+        $employees = mysqli_query($conn, 'select * from employees');
 
         # Close Connection
 
         mysqli_close($conn);
 
     ?>
+
+    <table class="customers">
+        <caption>
+            Customers
+        </caption>
+        <thead>
+            <th>CustomerID</th>
+            <th>FullName</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+        </thead>
+        <tbody>
+            <?php
+                while($row = mysqli_fetch_array($customers)) {
+                    echo("<tr>");
+                        echo("<td>{$row['CustomerID']}</td>");
+                        echo("<td>{$row['FullName']}</td>");
+                        echo("<td><a href='tel:{$row['Phone']}'>{$row['Phone']}</a></td>");
+                        echo("<td><a href='mailto:{$row['Email']}'>{$row['Email']}</a></td>");
+                        echo("<td><address>{$row['Address']}</address></td>");
+                    echo("</tr>");
+                }
+            ?>
+        </tbody>
+    </table>
+
+    <table class="orders">
+        <caption>
+            Orders
+        </caption>
+        <thead>
+            <th>OrderID</th>
+            <th>CustomerID</th>
+            <th>OrderName</th>
+            <th>OrderDate</th>
+        </thead>
+        <tbody>
+            <?php
+                while($row = mysqli_fetch_array($orders)) {
+                    echo("<tr>");
+                        echo("<td>{$row['OrderID']}</td>");
+                        echo("<td>{$row['CustomerID']}</td>");
+                        echo("<td>{$row['OrderName']}</td>");
+                        echo("<td>{$row['OrderDate']}</td>");
+                    echo("</tr>");
+                }
+            ?>
+        </tbody>
+    </table>
+
+    <table class="employees">
+        <caption>
+            Employees
+        </caption>
+        <thead>
+            <th>EmployeeID</th>
+            <th>FullName</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+            <?php
+                while($row = mysqli_fetch_array($employees)) {
+                    echo("<tr>");
+                        echo("<td>{$row['EmployeeID']}</td>");
+                        echo("<td>{$row['FullName']}</td>");
+                        echo("<td><a href='tel:{$row['Phone']}'>{$row['Phone']}</a></td>");
+                        echo("<td><a href='mailto:{$row['Email']}'>{$row['Email']}</a></td>");
+                    echo("</tr>");
+                }
+            ?>
+        </tbody>
+    </table>
+
 </body>
 </html>
