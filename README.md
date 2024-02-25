@@ -31,5 +31,3 @@
 ## License
 
 This project is licensed under the [ISC Licence](LICENCE.md). Feel free to modify and use it according to your needs. Refer to the license file for more details.
-
-< *Happy coding!*
