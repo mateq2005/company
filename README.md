@@ -7,11 +7,13 @@
 ## Files
 
 - [company.sql](company.sql)
-  - This file contains the SQL script to create the necessary database and tables. It defines the structure for storing customer details, order records, and company information.
+> This file contains the SQL script to create the necessary database and tables. It defines the structure for storing customer details, order records, and company information.
 
-- [index.php](index.php): The main PHP file responsible for integrating and presenting data from the database. It includes functionality to display customer information, manage orders, and showcase essential company details.
+- [index.php](index.php)
+> The main PHP file responsible for integrating and presenting data from the database. It includes functionality to display customer information, manage orders, and showcase essential company details.
 
-- [style.css](style.css): A cascading style sheet to enhance the visual presentation of the web interface. It ensures a clean and user-friendly design for better user experience.
+- [style.css](style.css)
+> A cascading style sheet to enhance the visual presentation of the web interface. It ensures a clean and user-friendly design for better user experience.
 
 ## Setup Instructions
 
