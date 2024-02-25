@@ -18,7 +18,7 @@
 ## Setup Instructions
 
 1. **Database Setup**:
-   - Execute the SQL script in `company.sql` to set up the required database and tables.
+   - Execute the SQL script `company.sql` to set up the required database and tables.
 
 2. **PHP Integration**:
    - Ensure that your PHP environment is properly configured.
