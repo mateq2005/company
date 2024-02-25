@@ -31,6 +31,6 @@
    - Navigate to the `index.php` file using your web browser.
    - Explore the platform to view and manage customer data, order records, and company information.
 
-## License
+## Licence
 
 > This project is licensed under the [ISC Licence](LICENCE.md). Feel free to modify and use it according to your needs. Refer to the license file for more details.
